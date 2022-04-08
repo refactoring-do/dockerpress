@@ -1,0 +1,8 @@
+*.env
+
+volumes/mysql/*
+volumes/wordpress/*
+
+!volumes/mysql/.gitkeep
+!volumes/wordpress/.gitkeep
+
