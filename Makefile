@@ -10,7 +10,7 @@ healthcheck:
 install: start healthcheck
 
 configure:
-	docker compose -f docker compose.yml -f auto-config.yml run --rm auto-config
+	docker compose -f docker-compose.yml -f auto-config.yml run --rm auto-config
 
 clean: down
 	@echo "Removing related folders/files"
