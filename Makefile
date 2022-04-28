@@ -1,16 +1,16 @@
 start:
-	docker-compose up -d --build
+	docker compose up -d --build
 
 down:
-	docker-compose down
+	docker compose down
 
 healthcheck:
-	docker-compose run --rm healthcheck
+	docker compose run --rm healthcheck
 
 install: start healthcheck
 
 configure:
-	docker-compose -f docker-compose.yml -f auto-config.yml run --rm auto-config
+	docker compose -f docker compose.yml -f auto-config.yml run --rm auto-config
 
 clean: down
 	@echo "Removing related folders/files"
